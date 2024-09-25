@@ -9,4 +9,3 @@ printf("A is positive");
 else 
 printf("A is negative");
 }
- 
