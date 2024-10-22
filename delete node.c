@@ -1,6 +1,3 @@
-//
-// Created by Pratik Giri on 13-10-2024.
-//
 // Created by Pratik Giri on 12-10-2024.
 #include<stdio.h>
 #include <stdlib.h>
@@ -10,7 +7,7 @@ typedef struct Node
     struct Node* next;
 }node;
 node* getnode(int x)
-{
+    {
     node* p;
     p= (node*)malloc(sizeof (node));
     p->data=x;
@@ -48,10 +45,12 @@ void display(node* s)
 }
 node* HP;
 //delete last node
-void dnode(){
+void dnode()
+    {
     node* q=HP;
     node* r;
-    if(q->next==NULL){
+    if(q->next==NULL)
+    {
         printf(" 1 node is present\n");
         free(HP);
         HP=NULL;
@@ -62,19 +61,18 @@ void dnode(){
         return;
     }
 else
-{
+    {
     while(q->next!=NULL){
         r=q;
         q=q->next;
     }
     free(q);
     r->next=NULL;
-}
+    }
 
 }
-
 int main()
-{
+    {
     printf("------Creat your list------\n");
     HP=linknode();
     printf("-------------------\n Display the link list \n");
