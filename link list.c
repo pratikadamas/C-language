@@ -1,4 +1,3 @@
-
 // Created by Pratik Giri on 12-10-2024.
 #include<stdio.h>
 #include <stdlib.h>
@@ -45,15 +44,18 @@ void display(node* s)
     }
 }
 node* HP;
-node* add1st(node* s,int x){
+node* add1st(node* s,int x)
+{
     node* p= getnode(x);
     p->next=s;
 
     return p;
 }
-void addend(node* s,int x){
+void addend(node* s,int x)
+{
     node* p= getnode(x);
-    while (s->next!=NULL){
+    while (s->next!=NULL)
+    {
         s=s->next;
     }
     s->next=p;
@@ -75,5 +77,6 @@ int main()
     addend(HP,e);
     printf("-------------------\n ---Display the new link list  after add a new node at the END---\n");
     display(HP);
+
     return 0;
 }
