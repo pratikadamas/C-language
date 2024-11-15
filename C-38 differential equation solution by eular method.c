@@ -20,15 +20,15 @@ int main(){
     scanf("%d",&n);
 
     h=(X-Xo)/n;
- //   printf("    Xn-1    Yn-1        ")
+  printf("    Xn-1            Yn-1       f(Xn-1,Yn-1)        Yn      \n");
     for (int i = 1; i <=n; ++i)
     {
-
+        printf("     %f      %f  ",Xo,Yo);
 
         Y= Yo + h * f(Xo,Yo);
+        printf("     %f      %f  \n",f(Xo,Yo),Y);
         Yo=Y;
         Xo=Xo+h;
-
 
     }
 
