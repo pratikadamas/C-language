@@ -14,26 +14,10 @@ int main(){
 
 int n=0;
     printf("\n      n         an         bn    Xn+1=(an+bn)/2    f(Xn+1)     \n");
-    if(f(a)*f(b)<0){
 
-        while(fabs(b-a)>error)
-        {
-
-            printf("      %d        %.3f      %.3f    ",n,a,b);
-                c = (a + b) / 2;
-
-            printf("    %.3f        %f \n",c,f(c));
-                if (f(c) == 0)
-                printf(" ROOT is c= %f", c);
-
-                else if (f(a) * f(c) < 0) {
-                    b = c;
-                }
-            else {
-                    a = c;
-                }
-n++;
-        }
+    if(f(a)*f(b)<0)
+     n++;
+        
 
         printf(" root is %f ", c);
     }
