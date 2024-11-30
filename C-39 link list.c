@@ -83,8 +83,8 @@ node* linklistreverse(node* Head){
         previous_node=current_node;
         current_node=Head;
     }
-
-    return previous_node;
+          Head=previous_node;
+    return Head;
 }
 int main()
 {
@@ -92,6 +92,7 @@ int main()
     HP=linknode();
     printf("-------------------\n Display the link list \n");
     display(HP);
+
     printf("For add a node at frist \n Enter a data part\n");
     int f,e;
     scanf("%d",&f);
@@ -99,13 +100,13 @@ int main()
     printf("-------------------\n ---Display the new link listafter add a new node at the FIRST---\n");
     display(HP);
     printf("For add a node at END \n Enter a data part\n");
+
     scanf("%d",&e);
     addend(HP,e);
     printf("-------------------\n ---Display the new link list  after add a new node at the END---\n");
     display(HP);
 
     HP=linklistreverse(HP);
-
     printf("-------------------\n ---Display the new reverse link list ---\n");
     display(HP);
 
