@@ -61,6 +61,8 @@ void addend(node* s,int x)
     s->next=p;
 }
 
+    //------------------------------- THE FUNCTION USE TO REVERSE LINKED-LIST---------------------------------------------
+
 node* linklistreverse(node* Head){
     node*  previous_node;
     node* current_node;
@@ -73,7 +75,7 @@ node* linklistreverse(node* Head){
     current_node=Head->next;
     Head=Head->next;
 
-    // make 1st as a last node
+       // -----------------make 1st as a last node------------------
     previous_node->next=NULL;
 
     while (Head!=NULL){
@@ -85,6 +87,22 @@ node* linklistreverse(node* Head){
     }
           Head=previous_node;
     return Head;
+}
+
+    //--------------------THE FUNCTION USE TO REVERSE LINKED-LIST-------------------
+node * reverselinklist(node* hp){
+
+    node *pre=NULL,*current=hp;
+    while(hp!=NULL){
+        hp=hp->next;
+        current->next=pre;
+        pre=current;
+        current=hp;
+    }
+
+    return pre;
+
+
 }
 int main()
 {
@@ -108,6 +126,10 @@ int main()
 
     HP=linklistreverse(HP);
     printf("-------------------\n ---Display the new reverse link list ---\n");
+    display(HP);
+
+    HP=reverselinklist(HP);
+    printf("-------------------\n ---Display the new reverse link list 2nd time ---\n");
     display(HP);
 
 
