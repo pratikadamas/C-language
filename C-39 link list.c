@@ -60,6 +60,32 @@ void addend(node* s,int x)
     }
     s->next=p;
 }
+
+node* linklistreverse(node* Head){
+    node*  previous_node;
+    node* current_node;
+
+    if(Head==NULL){
+        return NULL;
+    }
+
+    previous_node=Head;
+    current_node=Head->next;
+    Head=Head->next;
+
+    // make 1st as a last node
+    previous_node->next=NULL;
+
+    while (Head!=NULL){
+        Head=Head->next;
+        current_node->next=previous_node;
+//        current_node=Head;
+        previous_node=current_node;
+        current_node=Head;
+    }
+
+    return previous_node;
+}
 int main()
 {
     printf("------Creat your list------\n");
@@ -77,6 +103,13 @@ int main()
     addend(HP,e);
     printf("-------------------\n ---Display the new link list  after add a new node at the END---\n");
     display(HP);
+
+    HP=linklistreverse(HP);
+
+    printf("-------------------\n ---Display the new reverse link list ---\n");
+    display(HP);
+
+
 
     return 0;
 }
