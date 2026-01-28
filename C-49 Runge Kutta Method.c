@@ -1,6 +1,6 @@
 #include "stdio.h"
 float f(float x, float y){
-    return (y*y-x*x)/(y*y+x*x);
+    return x+y;
 }
 
 int main(){
@@ -39,7 +39,7 @@ int main(){
         Xo=Xo+h;
 
         Yo=Y;
-        
+
     }
 
     printf("\n Y = %f at X = %f ",Yo,Xo);
