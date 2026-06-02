@@ -1,8 +1,5 @@
-//
-// Created by Pratik Giri on 09-02-2025.
-//
-#include "stdio.h"
 
+#include "stdio.h"
 void merge(int arr[],int start,int mid ,int end){
     int i=start,j=mid+1,k=0;
     int  aux[end-start+1];
@@ -22,10 +19,10 @@ void merge(int arr[],int start,int mid ,int end){
         aux[k++]=arr[j];
     }
      k=0;
-    for(int i=start;i<=end;i++){
+    for(int i =start;i<=end;i++) // #remember the copy concept
+    {
         arr[i]=aux[k++];
     }
-
 
 }
 
@@ -38,8 +35,6 @@ void merge_sort(int arr[],int start, int end){
         merge(arr,start,mid,end);
     }
 }
-
-
 
 int main(){
     int n;
@@ -65,4 +60,6 @@ int main(){
     for(int i=0;i<n;i++){
         printf(" %d  ",arr[i]);
     }
+
+    return 0;
 }
