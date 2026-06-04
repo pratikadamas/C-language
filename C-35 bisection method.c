@@ -17,7 +17,7 @@ int n=0;
 
     if(f(a)*f(b)<0)
      n++;
-        
+
 
         printf(" root is %f ", c);
     }
